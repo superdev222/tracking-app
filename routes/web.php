@@ -11,9 +11,13 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-
-Route::get('/', "MongoTest@mongoConnect");
+Route::get('/api/test', function(){
+	return json_encode([
+	    'name' => 'Abigail',
+	    'state' => 'CA'
+	]);
+});
